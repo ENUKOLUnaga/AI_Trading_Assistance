@@ -10,19 +10,6 @@ st.set_page_config(
 
 st.title("📈 AI Trading Assistant")
 
-# Disclaimer 
-st.warning(
-    """
-    ⚠️ This analysis is AI-generated and intended for educational purposes only.
-
-    It is NOT financial advice. Please conduct your own research
-    before making investment decisions.
-    """
-)
-
-agree = st.checkbox(
-    "I understand this is not financial advice."
-)
 
 user_query = st.text_input(
     "Enter Stock Query",
