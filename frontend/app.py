@@ -1,8 +1,3 @@
-st.write("1")
-import pandas
-st.write("2")
-import pandas_ta
-st.write("3")
 import streamlit as st
 import requests
 from datetime import datetime
