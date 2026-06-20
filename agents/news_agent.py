@@ -45,4 +45,7 @@ def fetch_news(ticker: str):
             f"No news available for {ticker}"
         )
 
-    return stock.news
+    return stock.news[:10]
+
+if __name__=="__main__":
+    print(news_agent.run_sync("infy.NS"))
