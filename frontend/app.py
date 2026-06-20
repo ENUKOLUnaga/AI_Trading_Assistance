@@ -20,12 +20,6 @@ if st.button("Analyze"):
 
     # Input Validation 
 
-    if not agree:
-        st.warning(
-            "Please acknowledge the disclaimer before continuing."
-        )
-        st.stop()
-
     if not user_query.strip():
         st.error(
             "Please enter a stock query."
