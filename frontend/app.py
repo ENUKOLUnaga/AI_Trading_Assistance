@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 from datetime import datetime
 
+API_URL = "https://ai-trading-assistance.onrender.com/analyze"
 st.set_page_config(
     page_title="AI Trading Assistant",
     layout="wide"
@@ -9,7 +10,7 @@ st.set_page_config(
 
 st.title("📈 AI Trading Assistant")
 
-# Disclaimer Guardrail
+# Disclaimer 
 st.warning(
     """
     ⚠️ This analysis is AI-generated and intended for educational purposes only.
@@ -30,7 +31,7 @@ user_query = st.text_input(
 
 if st.button("Analyze"):
 
-    # Input Validation Guardrail
+    # Input Validation 
 
     if not agree:
         st.warning(
@@ -50,7 +51,7 @@ if st.button("Analyze"):
         with st.spinner("Analyzing stock..."):
 
             response = requests.get(
-                "http://127.0.0.1:8000/analyze",
+                API_URL,
                 params={"user_query": user_query},
                 timeout=120
             )
@@ -78,7 +79,7 @@ if st.button("Analyze"):
 
     result = response.json()
 
-    # Required Sections Guardrail
+    # Required Sections 
 
     required_sections = [
         "overview",
