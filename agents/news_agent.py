@@ -47,5 +47,4 @@ def fetch_news(ticker: str):
 
     return stock.news[:10]
 
-if __name__=="__main__":
-    print(news_agent.run_sync("infy.NS"))
+
